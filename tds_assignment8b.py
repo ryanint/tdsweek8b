@@ -18,17 +18,18 @@ def main():
     st.write("Enter three numbers and find the largest of the three.")
 
     # Get the user inputs
-    num1 = st.number_input("Enter the first number:")
-    num2 = st.number_input("Enter the second number:")
-    num3 = st.number_input("Enter the third number:")
+    num1 = int(st.number_input("Enter the first number:"))
+    num2 = int(st.number_input("Enter the second number:"))
+    num3 = int(st.number_input("Enter the third number:"))
 
-    # Find the largest number
-    largest_num = max(num1, num2, num3)
+    # Define a function to find the largest number
+    def find_largest():
+        largest_num = max(num1, num2, num3)
+        st.write("The largest number is:", largest_num)
 
-    # Display the largest number
-    st.write("The largest number is:", largest_num)
-
-
+    # Add a "Find Largest" button that calls the find_largest function when clicked
+    if st.button("Find Largest"):
+        find_largest()
 if __name__ == "__main__":
     main()
 
