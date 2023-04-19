@@ -18,9 +18,9 @@ def main():
     st.write("Enter three numbers and find the largest of the three.")
 
     # Get the user inputs
-    num1 = int(st.number_input("Enter the first number:"))
-    num2 = int(st.number_input("Enter the second number:"))
-    num3 = int(st.number_input("Enter the third number:"))
+    num1 = int(st.number_input("Enter the first number:",value=0))
+    num2 = int(st.number_input("Enter the second number:",value=0))
+    num3 = int(st.number_input("Enter the third number:",value=0))
 
     # Define a function to find the largest number
     def find_largest():
